@@ -1,0 +1,160 @@
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    background-color: var(--nav-color); /* Set the background color for dark mode */
+    color: var(--text-color); /* Set the text color for dark mode */
+}
+.dark .hero-section {
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 23%, rgba(0, 0, 0, 0.838) 90%);
+   }
+/* Left Section */
+.left-section {
+    flex: 1;
+    display: flex;
+    margin-top: 110px;
+    flex-direction: column;
+}
+
+.hero-title h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-paragraph {
+    margin-top: 20px;
+}
+
+/* Dark mode text color for left section */
+body.dark .left-section {
+    color: var(--text-color);
+}
+
+/* Dark mode text color for hero title */
+body.dark .hero-title h1 {
+    color: var(--text-color);
+}
+
+/* Dark mode text color for hero paragraph */
+body.dark .hero-paragraph {
+    color: var(--text-color);
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.contact-button,
+.explore-button {
+    padding: 10px 20px;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color:var(--nav-color) ;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #1fced4;
+}
+
+/* Dark mode button background color */
+body.dark .contact-button,
+body.dark .explore-button {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    margin-left: 50px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .right-section {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-section {
+        order: 1;
+    }
+
+    .right-section {
+        order: 2;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .hero-title {
+        order: 3;
+    }
+
+    .hero-image {
+        order: 4;
+    }
+
+    .hero-paragraph {
+        order: 5;
+    }
+
+    .hero-buttons {
+        order: 6;
+        margin-top: 20px;
+    }
+}
+
+/* ------------------ */
+/* ... (your existing CSS styles) ... */
+
+/* Mobile view image styling */
+.mobile-view-image {
+    display: none; /* Initially hide the image on larger screens */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    /* ... (your existing responsive styles) ... */
+
+    /* Adjustments for mobile view */
+    .mobile-view-image {
+        display: block; /* Show the mobile image on smaller screens */
+        width: 100%; /* Make it fill the container */
+        height: auto;
+        margin-top: 20px; /* Adjust spacing as needed */
+    }
+
+    /* Hide the laptop view image on smaller screens */
+    .right-section .hero-image {
+        display: none;
+    }
+}

@@ -1,0 +1,109 @@
+/* Reset some default styles */
+
+:root {
+  --nav-color: #00465E; /* Define --nav-color with your desired color */
+}
+
+.About-Section{
+  display: flex;
+  background-color: var(--nav-color);
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.dark .About-Section {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 23%, rgba(0, 0, 0, 0.838) 90%);
+}
+/* Light mode */
+.heading-div {
+  width: 100%;
+  background: color #000; ;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+}
+
+/* Dark mode */
+.dark-mode .heading-div {
+  background-color: var(--body-color);
+  color: rgb(255, 255, 255);
+}
+
+
+.inner-divs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.left-div {
+  flex: 1;
+  padding: 18px;
+  display: inline-grid;
+  grid: 1fr / 1fr;
+  text-align: right;
+  overflow: hidden;
+}
+
+.left-div::after,
+.left-div > video {
+  grid-area: 1 / 1;
+}
+
+.left-div::after {
+  content: '';
+  display: block;
+  box-shadow: inset rgb(0, 0, 0 / 60%) 0 0 50px;
+}
+
+.left-div video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 4px solid rgba(36, 150, 182, 0.578);
+  cursor: pointer;
+  border-radius: 10580px;
+}
+
+.right-div {
+  flex: 1;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.text-container {
+  text-align: center;
+  padding: 3px;
+  color: #ffffff;
+}
+
+/* Explore button */
+.explore-button {
+  margin-top: 20px;
+}
+
+
+/* Adjust for medium screens */
+@media (min-width: 600px) {
+  .inner-divs {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .left-div {
+      max-width: 40%;
+      margin-right: 20px;
+  }
+
+  .right-div {
+      max-width: 90%;
+      padding: 2px;
+  }
+}
+

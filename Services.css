@@ -1,0 +1,155 @@
+.services-sec {
+    padding: 50px 0;
+    text-align: center;
+}
+body.dark {
+    background-color: #000000;
+}
+body.dark .services-sec {
+    background-color: black;
+}
+
+body.dark .services-sec .section-heading,
+body.dark .services-sec h3,
+body.dark .services-sec .card p {
+    color: rgb(255, 255, 255);
+}
+
+body.dark .services-sec .card {
+    background-color: #000;
+    box-shadow: 0 0 35px rgba(92, 86, 86, 0.264);
+}
+
+body.dark .services-sec .card:hover .icon-wrapper {
+    background-color: #000; /* Adjust icon background color on hover for dark mode */
+    color: #fff;
+}
+.services-sec .section-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff; 
+    margin-bottom: 30px;
+}
+
+.services-sec .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+}
+
+.services-sec .column {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services-sec .card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2em 1.5em;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.services-sec .icon-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00465E; /* Change color as needed */
+    font-size: 30px;
+    height: 2.5em;
+    margin-top: 15px;
+    width: 2.5em;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+
+.services-sec h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff; /* Change color as needed */
+    margin: 3em 0 1em;
+}
+
+.services-sec .card:hover {
+    background-color: #00465E; /* Change color as needed */
+}
+
+.services-sec .card:hover .icon-wrapper {
+    background-color: #fff;
+    color: #3498db; /* Change color as needed */
+}
+
+.services-sec .card:hover h3 {
+    color: #fff;
+}
+
+.services-sec .card h3 {
+    color: var(--nav-color);
+}
+
+.services-sec .card p {
+    color: black;
+}
+
+.services-sec .card:hover p {
+    color: #ffffff;
+}
+
+
+@media screen and (min-width: 768px) {
+    .services-sec .column {
+        flex: 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .services-sec .column {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+/* Center for mobile views only */
+@media screen and (max-width: 600px) {
+    .services-sec .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right:19px;
+
+    }
+
+    .services-sec .column {
+        width: 100%;
+        margin: 10px;
+    }
+}
+
+.services-sec .card h3.Card-headings {
+    font-weight: 600;
+    color: var(--nav-color); 
+}
+
+.services-sec .card h3.Card-headings {
+    color: #ffffff; /* Change color on hover */
+}
+
+
+/* body.dark.services-sec .card h3.Card-headings {
+    color: black; 
+} */
+

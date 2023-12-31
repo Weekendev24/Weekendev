@@ -1,0 +1,91 @@
+/* Add this to your existing CSS file */
+
+.Contact {
+  color: white;
+  /* background-color: #000; */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.Contact h5 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.Contact_Form {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.Contact_Form label,
+.Contact_Form select,
+.Contact_Form textarea {
+  font-size: 14px;
+}
+
+.Contact_Form input,
+.Contact_Form select,
+.Contact_Form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  transition: border-color 0.3s;
+}
+
+.Contact_Form textarea {
+  resize: vertical;
+}
+
+.Contact_Form button {
+  padding: 8px 15px;
+  font-size: 14px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.Contact_Form select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.Contact_Form select option {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+}
+
+.Contact_Form button:hover {
+  background-color: white;
+  color: #333;
+  border-color: none;
+}
+
+.Contact_Form input:focus,
+.Contact_Form select:focus,
+.Contact_Form textarea:focus {
+  outline: none;
+  border-color:#000000
+}
+
+@media screen and (max-width: 600px) {
+  .Contact h5 {
+    font-size: 20px;
+  }
+
+  .Contact_Form {
+    max-width: 90%;
+  }
+}
+
+.outer-cover {
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  border-radius: 8px;
+}
